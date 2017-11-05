@@ -1,0 +1,78 @@
+- id: notify_if_front_door_was_opened
+  alias: Notify if front door was opened
+  trigger:
+  - entity_id: binary_sensor.front_door_sensor
+    platform: state
+    to: 'on'
+  action:
+  - data:
+      message: The front door was opened.
+    service: notify.family
+- id: update_available
+  alias: Update available
+  trigger:
+    platform: state
+    entity_id: updater.updater
+  action:
+  - data:
+      message: An update for Home Assistant is available.
+    service: notify.family
+- id: turn_on_hall_light_when_door_is_opened_and_nobody_is_home
+  alias: Turn on hall light when door is opened and nobody is home
+  trigger:
+  - entity_id: binary_sensor.front_door_sensor
+    platform: state
+    to: open
+  condition:
+  - condition: state
+    entity_id: group.family
+    state: not_home
+  action:
+  - data:
+      entity_id: switch.hall_socket_switch
+    service: switch.turn_on
+- id: turn_on_hall_light_when_sun_sets
+  alias: Turn on hall light when sun sets
+  trigger:
+  - event: sunset
+    platform: sun
+  action:
+  - data:
+      entity_id: switch.hall_socket_switch
+    service: switch.turn_on
+- id: turn_off_hall_light_when_sun_rises
+  alias: Turn off hall light when sun rises
+  trigger:
+  - event: sunrise
+    offset: -00:45:00
+    platform: sun
+  action:
+  - data:
+      entity_id: switch.hall_socket_switch
+    service: switch.turn_off
+- id: turn_off_outdoor_lights_when_sun_rises
+  alias: Turn off outdoor lights when sun rises
+  trigger:
+  - event: sunrise
+    offset: -00:45:00
+    platform: sun
+  action:
+  - data:
+      entity_id: switch.basementoutdoorlightsswitch
+    service: switch.turn_off
+  - data:
+      message: The outdoor lights have been turned off.
+    service: notify.family
+- id: turn_on_outdoor_lights_when_sun_sets
+  alias: Turn on outdoor lights when sun sets
+  trigger:
+  - event: sunset
+    offset: +00:45:00
+    platform: sun
+  action:
+  - data:
+      entity_id: switch.basementoutdoorlightsswitch
+    service: switch.turn_on
+  - data:
+      message: The outdoor lights have been turned on.
+    service: notify.family

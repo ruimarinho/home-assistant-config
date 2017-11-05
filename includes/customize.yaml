@@ -1,0 +1,32 @@
+binary_sensor.front_door_sensor:
+  device_class: opening
+  friendly_name: Front Door
+  icon: mdi:security-home
+
+sensor.fridge_socket_energy:
+  friendly_name: Fridge Energy Consumption
+
+sensor.fridge_socket_power:
+  friendly_name: Fridge Power Consumption
+
+switch.fridge_socket_switch:
+  friendly_name: Fridge Socket
+
+sensor.hall_socket_energy:
+  friendly_name: Hall Socket Energy Consumption
+
+sensor.hall_socket_power:
+  friendly_name: Hall Socket Power Consumption
+
+sensor.us_air_pollution_level:
+  friendly_name: Pollution Level
+
+sensor.us_main_pollutant:
+  friendly_name: Main Pollutant
+
+switch.hall_socket_switch:
+  friendly_name: Hall Socket
+
+switch.basementoutdoorlightsswitch:
+  friendly_name: Garden Lights
+  icon: mdi:lightbulb-on-outline

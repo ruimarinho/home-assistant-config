@@ -1,0 +1,6 @@
+hall:
+  name: Hall
+  entities:
+    - binary_sensor.front_door_sensor
+    - switch.hall_socket_switch
+    - sensor.hall_socket_power

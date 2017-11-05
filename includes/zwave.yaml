@@ -1,0 +1,2 @@
+usb_path: /dev/zwave
+network_key: !secret zwave_network_key

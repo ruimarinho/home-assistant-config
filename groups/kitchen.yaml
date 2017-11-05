@@ -1,0 +1,6 @@
+kitchen:
+  name: Kitchen
+  entities:
+    - sensor.fridge_socket_energy
+    - sensor.fridge_socket_power
+    - switch.fridge_socket_switch

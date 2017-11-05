@@ -1,0 +1,7 @@
+- name: family
+  platform: telegram
+  chat_id: !secret notify_telegram_family_chat_id
+
+- name: ruimarinho
+  platform: telegram
+  chat_id: !secret notify_telegram_ruimarinho_chat_id

@@ -1,0 +1,6 @@
+- platform: unifi
+  host: !secret device_tracker_unifi_host
+  username: home-assistant
+  password: !secret device_tracker_unifi_password
+  track_new_devices: false
+  verify_ssl: false

@@ -1,0 +1,5 @@
+environment:
+  name: Environment
+  entities:
+    - sensor.us_air_pollution_level
+    - sensor.us_main_pollutant

@@ -1,0 +1,11 @@
+default_view:
+  view: yes
+  entities:
+    - group.kitchen
+    - group.hall
+    - group.family
+    - group.environment
+    - group.outdoor
+    - group.living_room
+    - group.weather_today
+    - group.weather_forecast

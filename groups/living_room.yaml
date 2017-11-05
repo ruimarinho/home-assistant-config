@@ -1,0 +1,5 @@
+living_room:
+  entities:
+    - media_player.living_room
+    - camera.living_room
+    - camera.rear

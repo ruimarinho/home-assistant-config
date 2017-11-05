@@ -1,0 +1,4 @@
+outdoor:
+  name: Outdoor
+  entities:
+    - switch.basementoutdoorlightsswitch

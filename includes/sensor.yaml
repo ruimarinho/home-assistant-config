@@ -1,0 +1,30 @@
+- platform: yr
+
+- platform: airvisual
+  api_key: !secret sensor_airvisual
+  monitored_conditions:
+    - us
+  latitude: !secret homeassistant_latitude
+  longitude: !secret homeassistant_longitude
+
+- platform: wunderground
+  api_key: !secret sensor_wunderground_api_key
+  pws_id: !secret sensor_wunderground_pws_id
+  monitored_conditions:
+    - alerts
+    - precip_1d
+    - precip_1d_mm
+    - temp_c
+    - temp_high_1d_c
+    - temp_low_1d_c
+    - UV
+    - weather_1d_metric
+    - weather_1n_metric
+    - weather_2d_metric
+    - weather_2n_metric
+    - weather_3d_metric
+    - weather_3n_metric
+    - weather_4d_metric
+    - weather_4n_metric
+    - wind_1d_kph
+    - wind_kph

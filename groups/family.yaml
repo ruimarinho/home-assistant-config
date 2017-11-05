@@ -1,0 +1,9 @@
+family:
+  name: Family
+  entities:
+    - !secret device_tracker_1
+    - !secret device_tracker_2
+    - !secret device_tracker_3
+    - !secret device_tracker_4
+    - !secret device_tracker_5
+    - !secret device_tracker_6
