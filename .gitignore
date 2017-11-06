@@ -4,5 +4,6 @@
 !configuration.yaml
 !groups/
 !includes/
+!LICENSE
 !README.md
 !secrets.sample.yaml
