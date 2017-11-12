@@ -33,6 +33,7 @@ logbook:
 sun:
 
 # Include additional configuration files.
+binary_sensor: !include includes/binary_sensor.yaml
 camera: !include includes/camera.yaml
 device_tracker: !include includes/device_tracker.yaml
 group: !include_dir_merge_named groups/

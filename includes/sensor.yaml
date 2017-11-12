@@ -7,6 +7,16 @@
   latitude: !secret homeassistant_latitude
   longitude: !secret homeassistant_longitude
 
+- platform: mqtt
+  name: Laundry Washer Power Consumption Sensor
+  state_topic: /home/laundry/washer/power
+  unit_of_measurement: W
+
+- platform: mqtt
+  name: Laundry Washer Current Consumption Sensor
+  state_topic: /home/laundry/washer/current
+  unit_of_measurement: A
+
 - platform: rest
   name: Garden Sprinklers Last Run Sensor
   resource: !secret sensor_garden_sprinklers_last_run_sensor_resource

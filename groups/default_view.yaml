@@ -6,6 +6,7 @@ default_view:
     - group.family
     - group.environment
     - group.outdoor
+    - group.laundry
     - group.living_room
     - group.weather_today
     - group.weather_forecast

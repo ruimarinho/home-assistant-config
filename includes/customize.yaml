@@ -118,3 +118,13 @@ switch.hall_socket_switch:
 switch.basement_outdoor_lights_switch:
   friendly_name: Garden Lights
   icon: mdi:lightbulb-on-outline
+
+binary_sensor.laundry_washer_power_sensor:
+  friendly_name: Washer Power
+  icon: mdi:washing-machine
+
+sensor.laundry_washer_current_consumption_sensor:
+  friendly_name: Washer Current Consumption
+
+sensor.laundry_washer_power_consumption_sensor:
+  friendly_name: Washer Power Consumption
