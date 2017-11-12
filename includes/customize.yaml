@@ -65,6 +65,7 @@ sensor.garden_sprinklers_last_run_sensor:
 
 sensor.fridge_socket_energy:
   friendly_name: Fridge Energy Consumption
+  icon: mdi:fridge
 
 sensor.fridge_socket_power:
   friendly_name: Fridge Power Consumption
