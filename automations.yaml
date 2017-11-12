@@ -54,7 +54,7 @@
   alias: Turn off outdoor lights when sun rises
   trigger:
   - event: sunrise
-    offset: -00:45:00
+    offset: -00:30:00
     platform: sun
   action:
   - data:
@@ -67,7 +67,7 @@
   alias: Turn on outdoor lights when sun sets
   trigger:
   - event: sunset
-    offset: +00:45:00
+    offset: +00:15:00
     platform: sun
   action:
   - data:
