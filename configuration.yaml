@@ -42,6 +42,7 @@ media_player: !include includes/media_player.yaml
 mqtt: !include includes/mqtt.yaml
 notify: !include includes/notify.yaml
 sensor: !include includes/sensor.yaml
+switch: !include includes/switch.yaml
 telegram_bot: !include includes/telegram_bot.yaml
 updater: !include includes/updater.yaml
 zwave: !include includes/zwave.yaml

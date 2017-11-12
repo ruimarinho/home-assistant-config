@@ -27,6 +27,6 @@ sensor.us_main_pollutant:
 switch.hall_socket_switch:
   friendly_name: Hall Socket
 
-switch.basementoutdoorlightsswitch:
+switch.basement_outdoor_lights_switch:
   friendly_name: Garden Lights
   icon: mdi:lightbulb-on-outline

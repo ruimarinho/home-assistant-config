@@ -1,0 +1,6 @@
+- platform: mqtt
+  name: Basement Outdoor Lights Switch
+  state_topic: /home/basement/outdoor-lights/relay/0
+  command_topic: /home/basement/outdoor-lights/relay/0/set
+  payload_on: '1'
+  payload_off: '0'

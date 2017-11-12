@@ -58,7 +58,7 @@
     platform: sun
   action:
   - data:
-      entity_id: switch.basementoutdoorlightsswitch
+      entity_id: switch.basement_outdoor_lights_switch
     service: switch.turn_off
   - data:
       message: The outdoor lights have been turned off.
@@ -71,7 +71,7 @@
     platform: sun
   action:
   - data:
-      entity_id: switch.basementoutdoorlightsswitch
+      entity_id: switch.basement_outdoor_lights_switch
     service: switch.turn_on
   - data:
       message: The outdoor lights have been turned on.
