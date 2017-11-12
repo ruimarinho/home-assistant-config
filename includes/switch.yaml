@@ -4,3 +4,47 @@
   command_topic: /home/basement/outdoor-lights/relay/0/set
   payload_on: '1'
   payload_off: '0'
+
+- platform: command_line
+  switches:
+    garden_sprinklers_station_1_switch:
+      command_on: !secret switch_switches_garden_sprinklers_station_1_switch_command_on
+      command_off: !secret switch_switches_garden_sprinklers_station_1_switch_command_off
+      command_state: !secret switch_switches_garden_sprinklers_station_1_switch_command_state
+      value_template: '{{ value_json.sn[0] == 1 }}'
+
+    garden_sprinklers_station_2_switch:
+      command_on: !secret switch_switches_garden_sprinklers_station_2_switch_command_on
+      command_off: !secret switch_switches_garden_sprinklers_station_2_switch_command_off
+      command_state: !secret switch_switches_garden_sprinklers_station_2_switch_command_state
+      value_template: '{{ value_json.sn[1] == 1 }}'
+
+    garden_sprinklers_station_3_switch:
+      command_on: !secret switch_switches_garden_sprinklers_station_3_switch_command_on
+      command_off: !secret switch_switches_garden_sprinklers_station_3_switch_command_off
+      command_state: !secret switch_switches_garden_sprinklers_station_3_switch_command_state
+      value_template: '{{ value_json.sn[2] == 1 }}'
+
+    garden_sprinklers_station_4_switch:
+      command_on: !secret switch_switches_garden_sprinklers_station_4_switch_command_on
+      command_off: !secret switch_switches_garden_sprinklers_station_4_switch_command_off
+      command_state: !secret switch_switches_garden_sprinklers_station_4_switch_command_state
+      value_template: '{{ value_json.sn[3] == 1 }}'
+
+    garden_sprinklers_station_5_switch:
+      command_on: !secret switch_switches_garden_sprinklers_station_5_switch_command_on
+      command_off: !secret switch_switches_garden_sprinklers_station_5_switch_command_off
+      command_state: !secret switch_switches_garden_sprinklers_station_5_switch_command_state
+      value_template: '{{ value_json.sn[4] == 1 }}'
+
+    garden_sprinklers_station_6_switch:
+      command_on: !secret switch_switches_garden_sprinklers_station_6_switch_command_on
+      command_off: !secret switch_switches_garden_sprinklers_station_6_switch_command_off
+      command_state: !secret switch_switches_garden_sprinklers_station_6_switch_command_state
+      value_template: '{{ value_json.sn[5] == 1 }}'
+
+    garden_sprinklers_station_7_switch:
+      command_on: !secret switch_switches_garden_sprinklers_station_7_switch_command_on
+      command_off: !secret switch_switches_garden_sprinklers_station_7_switch_command_off
+      command_state: !secret switch_switches_garden_sprinklers_station_7_switch_command_state
+      value_template: '{{ value_json.sn[6] == 1 }}'

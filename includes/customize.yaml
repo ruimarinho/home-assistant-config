@@ -3,6 +3,66 @@ binary_sensor.front_door_sensor:
   friendly_name: Front Door
   icon: mdi:security-home
 
+binary_sensor.garden_sprinklers_station_1_sensor:
+  friendly_name: Station 1
+  icon: mdi:water
+
+binary_sensor.garden_sprinklers_station_2_sensor:
+  friendly_name: Station 2
+  icon: mdi:water
+
+binary_sensor.garden_sprinklers_station_3_sensor:
+  friendly_name: Station 3
+  icon: mdi:water
+
+binary_sensor.garden_sprinklers_station_4_sensor:
+  friendly_name: Station 4
+  icon: mdi:water
+
+binary_sensor.garden_sprinklers_station_5_sensor:
+  friendly_name: Station 5
+  icon: mdi:water
+
+binary_sensor.garden_sprinklers_station_6_sensor:
+  friendly_name: Station 6
+  icon: mdi:water
+
+binary_sensor.garden_sprinklers_station_7_sensor:
+  friendly_name: Station 7
+  icon: mdi:water
+
+input_number.garden_sprinklers_station_1_slider:
+  friendly_name: Station 1 Timer
+  icon: mdi:timer
+
+input_number.garden_sprinklers_station_2_slider:
+  friendly_name: Station 2 Timer
+  icon: mdi:timer
+
+input_number.garden_sprinklers_station_3_slider:
+  friendly_name: Station 3 Timer
+  icon: mdi:timer
+
+input_number.garden_sprinklers_station_4_slider:
+  friendly_name: Station 4 Timer
+  icon: mdi:timer
+
+input_number.garden_sprinklers_station_5_slider:
+  friendly_name: Station 5 Timer
+  icon: mdi:timer
+
+input_number.garden_sprinklers_station_6_slider:
+  friendly_name: Station 6 Timer
+  icon: mdi:timer
+
+input_number.garden_sprinklers_station_7_slider:
+  friendly_name: Station 7 Timer
+  icon: mdi:timer
+
+sensor.garden_sprinklers_last_run_sensor:
+  friendly_name: Last Run
+  icon: mdi:water
+
 sensor.fridge_socket_energy:
   friendly_name: Fridge Energy Consumption
 
@@ -23,6 +83,34 @@ sensor.us_air_pollution_level:
 
 sensor.us_main_pollutant:
   friendly_name: Main Pollutant
+
+switch.garden_sprinklers_station_1_switch:
+  friendly_name: Station 1
+  icon: mdi:water
+
+switch.garden_sprinklers_station_2_switch:
+  friendly_name: Station 2
+  icon: mdi:water
+
+switch.garden_sprinklers_station_3_switch:
+  friendly_name: Station 3
+  icon: mdi:water
+
+switch.garden_sprinklers_station_4_switch:
+  friendly_name: Station 4
+  icon: mdi:water
+
+switch.garden_sprinklers_station_5_switch:
+  friendly_name: Station 5
+  icon: mdi:water
+
+switch.garden_sprinklers_station_6_switch:
+  friendly_name: Station 6
+  icon: mdi:water
+
+switch.garden_sprinklers_station_7_switch:
+  friendly_name: Station 7
+  icon: mdi:water
 
 switch.hall_socket_switch:
   friendly_name: Hall Socket

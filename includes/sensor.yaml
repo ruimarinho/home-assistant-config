@@ -7,6 +7,11 @@
   latitude: !secret homeassistant_latitude
   longitude: !secret homeassistant_longitude
 
+- platform: rest
+  name: Garden Sprinklers Last Run Sensor
+  resource: !secret sensor_garden_sprinklers_last_run_sensor_resource
+  value_template: '{{ value_json.lrun[3] | timestamp_local }}'
+
 - platform: wunderground
   api_key: !secret sensor_wunderground_api_key
   pws_id: !secret sensor_wunderground_pws_id
