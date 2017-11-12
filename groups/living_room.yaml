@@ -1,5 +1,7 @@
 living_room:
+  name: Living Room
   entities:
+    - switch.living_room_sofa_corner_light_switch
     - media_player.living_room
     - camera.living_room
     - camera.rear

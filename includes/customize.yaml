@@ -120,6 +120,10 @@ switch.basement_outdoor_lights_switch:
   friendly_name: Garden Lights
   icon: mdi:lightbulb-on-outline
 
+switch.living_room_sofa_corner_light_switch:
+  friendly_name: Sofa Corner Light
+  icon: mdi:lightbulb-on-outline
+
 binary_sensor.laundry_washer_power_sensor:
   friendly_name: Washer Power
   icon: mdi:washing-machine
