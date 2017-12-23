@@ -9,6 +9,20 @@
     data:
       message: An update for Home Assistant is available.
 
+# Laundry
+- id: notify_if_washer_has_finished
+  alias: Notify if washer has finished
+  trigger:
+    platform: state
+    entity_id: binary_sensor.laundry_washer_power_sensor
+    to: 'off'
+    for:
+      minutes: 5
+  action:
+    service: notify.family
+    data:
+      message: The washer has finished its cycle.
+
 # Living Room
 - id: turn_on_xmas_lights_when_someone_arrives_home
   alias: Turn on X-mas lights when someone arrives home
