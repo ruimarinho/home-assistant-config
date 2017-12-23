@@ -1,4 +1,4 @@
-binary_sensor.front_door_sensor:
+binary_sensor.hall_front_door_sensor:
   device_class: opening
   friendly_name: Front Door
   icon: mdi:security-home
