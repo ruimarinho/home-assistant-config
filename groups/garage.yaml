@@ -1,0 +1,5 @@
+garage:
+  name: Garage
+  entities:
+    - sensor.garage_door_status_sensor
+    - sensor.garage_door_distance_sensor

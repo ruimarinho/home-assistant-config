@@ -1,0 +1,10 @@
+garage_door_status_dropdown:
+  name: Garage Status
+  options:
+    - Open
+    - Closed
+    - Closed (Car Parked)
+    - Just Opened
+    - Just Closed
+    - Just Closed (Car Parked)
+  initial: Closed

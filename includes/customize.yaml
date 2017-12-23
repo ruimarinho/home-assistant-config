@@ -133,3 +133,10 @@ sensor.laundry_washer_current_consumption_sensor:
 
 sensor.laundry_washer_power_consumption_sensor:
   friendly_name: Washer Power
+
+sensor.garage_door_distance_sensor:
+  friendly_name: Distance
+  icon: mdi:ruler
+
+sensor.garage_door_status_sensor:
+  icon: mdi:garage

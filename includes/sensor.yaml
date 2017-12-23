@@ -17,6 +17,18 @@
   state_topic: /home/laundry/washer/current
   unit_of_measurement: A
 
+- platform: mqtt
+  name: Garage Door Distance Sensor
+  state_topic: /home/garage/garage-door/distance
+  unit_of_measurement: cm
+
+- platform: template
+  sensors:
+    garage_door_status_sensor:
+      friendly_name: Door
+      value_template: '{{ states.input_select.garage_door_status_dropdown.state }}'
+      entity_id: input_select.garage_door_status_dropdown
+
 - platform: template
   sensors:
     homeassistant_base_url:
