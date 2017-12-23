@@ -13,11 +13,6 @@
   unit_of_measurement: W
 
 - platform: mqtt
-  name: Laundry Washer Current Consumption Sensor
-  state_topic: /home/laundry/washer/current
-  unit_of_measurement: A
-
-- platform: mqtt
   name: Garage Door Distance Sensor
   state_topic: /home/garage/garage-door/distance
   unit_of_measurement: cm
