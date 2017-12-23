@@ -4,12 +4,12 @@ default_view:
     - group.vacation
     - group.kitchen
     - group.hall
+    - group.living_room
     - group.suite
     - group.family
-    - group.environment
     - group.outdoor
     - group.laundry
     - group.garage
-    - group.living_room
     - group.weather_today
     - group.weather_forecast
+    - group.environment
