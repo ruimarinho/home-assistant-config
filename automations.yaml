@@ -17,39 +17,42 @@
   - data:
       message: An update for Home Assistant is available.
     service: notify.family
-- id: turn_on_hall_light_when_door_is_opened_and_nobody_is_home
-  alias: Turn on hall light when door is opened and nobody is home
+
+- id: turn_on_hall_light_when_door_is_opened_sun_is_set_and_nobody_is_home
+  alias: Turn on hall light when door is opened, sun is set and nobody is home
   trigger:
-  - entity_id: binary_sensor.front_door_sensor
     platform: state
-    to: open
+    entity_id: binary_sensor.hall_front_door_sensor
+    to: 'on'
   condition:
-  - condition: state
-    entity_id: group.family
-    state: not_home
+    - condition: state
+      entity_id: group.family
+      state: 'not_home'
+    - condition: state
+      entity_id: sun.sun
+      state: 'below_horizon'
   action:
-  - data:
-      entity_id: switch.hall_socket_switch
     service: switch.turn_on
-- id: turn_on_hall_light_when_sun_sets
-  alias: Turn on hall light when sun sets
+    entity_id: switch.hall_presence_light_switch
+
+- id: turn_on_hall_presence_light_when_sun_sets
+  alias: Turn on hall presence light when sun sets
   trigger:
-  - event: sunset
     platform: sun
+    event: sunset
   action:
-  - data:
-      entity_id: switch.hall_socket_switch
     service: switch.turn_on
-- id: turn_off_hall_light_when_sun_rises
-  alias: Turn off hall light when sun rises
+    entity_id: switch.hall_presence_light_switch
+
+- id: turn_off_hall_presence_light_when_sun_rises
+  alias: Turn off hall presence light when sun rises
   trigger:
-  - event: sunrise
+    platform: sun
+    event: sunrise
     offset: -00:45:00
-    platform: sun
   action:
-  - data:
-      entity_id: switch.hall_socket_switch
     service: switch.turn_off
+    entity_id: switch.hall_presence_light_switch
 
 # Garden
 - id: turn_off_garden_lights_when_sun_rises
