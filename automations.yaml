@@ -9,6 +9,59 @@
     data:
       message: An update for Home Assistant is available.
 
+# Living Room
+- id: turn_on_xmas_lights_when_someone_arrives_home
+  alias: Turn on X-mas lights when someone arrives home
+  trigger:
+    platform: state
+    entity_id: group.family
+    to: 'home'
+  condition:
+    condition: state
+    entity_id: switch.living_room_sofa_corner_light_switch
+    state: 'off'
+  action:
+    - service: switch.turn_on
+      entity_id: switch.living_room_sofa_corner_light_switch
+    - service: notify.family
+      data:
+        message: The X-mas lights have been turned on.
+
+- id: turn_on_xmas_lights_when_sun_sets_and_someone_is_home
+  alias: Turn on X-mas lights when sun sets and someone is home
+  trigger:
+    platform: sun
+    event: sunset
+  condition:
+    - condition: state
+      entity_id: group.family
+      state: 'home'
+    - condition: state
+      entity_id: switch.living_room_sofa_corner_light_switch
+      state: 'off'
+  action:
+    - service: switch.turn_on
+      entity_id: switch.living_room_sofa_corner_light_switch
+    - service: notify.family
+      data:
+        message: The X-mas lights have been turned on.
+
+- id: turn_off_xmas_lights_at_02_00
+  alias: Turn off X-mas lights at 02:00
+  trigger:
+    platform: time
+    at: '02:00:00'
+  condition:
+    condition: state
+    entity_id: switch.living_room_sofa_corner_light_switch
+    state: 'on'
+  action:
+    - service: switch.turn_off
+      entity_id: switch.living_room_sofa_corner_light_switch
+    - service: notify.family
+      data:
+        message: The X-mas lights have been turned off.
+
 # Hall
 - id: notify_if_front_door_was_opened
   alias: Notify if front door was opened
