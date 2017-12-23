@@ -129,7 +129,7 @@ binary_sensor.laundry_washer_power_sensor:
   icon: mdi:washing-machine
 
 sensor.laundry_washer_current_consumption_sensor:
-  friendly_name: Washer Current Consumption
+  friendly_name: Washer Current
 
 sensor.laundry_washer_power_consumption_sensor:
-  friendly_name: Washer Power Consumption
+  friendly_name: Washer Power
