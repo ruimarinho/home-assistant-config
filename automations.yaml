@@ -357,3 +357,16 @@
     - service: notify.family
       data:
         message: The AC has been turned off in the suite.
+
+# Weather
+- id: notify_if_there_are_weather_alerts
+  alias: Notify if there are weather alerts
+  initial_state: true
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.pws_alerts
+    above: 0
+  action:
+    service: notify.family
+    data:
+      message: '{% if states.sensor.pws_alerts.attributes.Message %}{% endif -%}{% if states.sensor.pws_alerts.attributes.Message_WND %}{{ states.sensor.pws_alerts.attributes.Message_WND }}{% endif -%}{% if states.sensor.pws_alerts.attributes.Message_SPE %}{{ states.sensor.pws_alerts.attributes.Message_SPE }}{% endif -%}{% if states.sensor.pws_alerts.attributes.Message_FLO %}{{ states.sensor.pws_alerts.attributes.Message_FLO }}{% endif -%}'
