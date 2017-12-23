@@ -15,7 +15,7 @@ Sensitive information has been purportedly removed (i.e. `secrets.yaml`), but ta
 
 Replace all sample secrets by your own keys. Naturally, it assumes you will have exactly the same devices as me, but the goal of this repository is to share ideas.
 
-![dashboard](https://user-images.githubusercontent.com/288709/32417508-c6948ca6-c252-11e7-8a0c-c4a9e3fa8044.jpg)
+![dashboard](https://user-images.githubusercontent.com/288709/34322365-2e6404f2-e81d-11e7-92fd-19e793a44ed9.png)
 
 ## Features
 
