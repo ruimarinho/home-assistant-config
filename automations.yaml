@@ -147,71 +147,71 @@
             url: '{{ states.sensor.homeassistant_base_url.state ~ states.camera.rear.attributes.entity_picture }}'
         message: Message is ignored
 
+# Garden: Sprinklers
 - id: turn_off_garden_sprinklers_station_1_after_timer
   alias: Turn off garden sprinklers station 1 after timer
   trigger:
-  - entity_id: switch.garden_sprinklers_station_1_switch
     platform: state
+    entity_id: switch.garden_sprinklers_station_1_switch
     to: 'on'
   action:
-  - delay: 00:{{ states.input_number.garden_sprinklers_station_1_slider.state | int }}:00
-  - service: switch.turn_off
-    data:
+    - delay: 00:{{ states.input_number.garden_sprinklers_station_1_slider.state | int }}:00
+    - service: switch.turn_off
       entity_id: switch.garden_sprinklers_station_1_switch
+
 - id: turn_off_garden_sprinklers_station_2_after_timer
   alias: Turn off garden sprinklers station 2 after timer
   trigger:
-  - entity_id: switch.garden_sprinklers_station_2_switch
     platform: state
+    entity_id: switch.garden_sprinklers_station_2_switch
     to: 'on'
   action:
-  - delay: 00:{{ states.input_number.garden_sprinklers_station_2_slider.state | int }}:00
-  - service: switch.turn_off
-    data:
+    - delay: 00:{{ states.input_number.garden_sprinklers_station_2_slider.state | int }}:00
+    - service: switch.turn_off
       entity_id: switch.garden_sprinklers_station_2_switch
+
 - id: turn_off_garden_sprinklers_station_3_after_timer
   alias: Turn off garden sprinklers station 3 after timer
   trigger:
-  - entity_id: switch.garden_sprinklers_station_3_switch
     platform: state
+    entity_id: switch.garden_sprinklers_station_3_switch
     to: 'on'
   action:
-  - delay: 00:{{ states.input_number.garden_sprinklers_station_3_slider.state | int }}:00
-  - service: switch.turn_off
-    data:
+    - delay: 00:{{ states.input_number.garden_sprinklers_station_3_slider.state | int }}:00
+    - service: switch.turn_off
       entity_id: switch.garden_sprinklers_station_3_switch
+
 - id: turn_off_garden_sprinklers_station_4_after_timer
   alias: Turn off garden sprinklers station 4 after timer
   trigger:
-  - entity_id: switch.garden_sprinklers_station_4_switch
     platform: state
+    entity_id: switch.garden_sprinklers_station_4_switch
     to: 'on'
   action:
-  - delay: 00:{{ states.input_number.garden_sprinklers_station_4_slider.state | int }}:00
-  - service: switch.turn_off
-    data:
+    - delay: 00:{{ states.input_number.garden_sprinklers_station_4_slider.state | int }}:00
+    - service: switch.turn_off
       entity_id: switch.garden_sprinklers_station_4_switch
+
 - id: turn_off_garden_sprinklers_station_5_after_timer
   alias: Turn off garden sprinklers station 5 after timer
   trigger:
-  - entity_id: switch.garden_sprinklers_station_5_switch
     platform: state
+    entity_id: switch.garden_sprinklers_station_5_switch
     to: 'on'
   action:
-  - delay: 00:{{ states.input_number.garden_sprinklers_station_5_slider.state | int }}:00
-  - service: switch.turn_off
-    data:
+    - delay: 00:{{ states.input_number.garden_sprinklers_station_5_slider.state | int }}:00
+    - service: switch.turn_off
       entity_id: switch.garden_sprinklers_station_5_switch
+
 - id: turn_off_garden_sprinklers_station_7_after_timer
   alias: Turn off garden sprinklers station 7 after timer
   trigger:
-  - entity_id: switch.garden_sprinklers_station_7_switch
     platform: state
+    entity_id: switch.garden_sprinklers_station_7_switch
     to: 'on'
   action:
-  - delay: 00:{{ states.input_number.garden_sprinklers_station_7_slider.state | int }}:00
-  - service: switch.turn_off
-    data:
+    - delay: 00:{{ states.input_number.garden_sprinklers_station_7_slider.state | int }}:00
+    - service: switch.turn_off
       entity_id: switch.garden_sprinklers_station_7_switch
 
 # Garage
