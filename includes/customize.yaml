@@ -63,15 +63,15 @@ sensor.garden_sprinklers_last_run_sensor:
   friendly_name: Last Run
   icon: mdi:water
 
-sensor.fridge_socket_energy:
-  friendly_name: Fridge Energy Consumption
+sensor.kitchen_fridge_energy:
+  friendly_name: Fridge Energy
   icon: mdi:fridge
 
-sensor.fridge_socket_power:
-  friendly_name: Fridge Power Consumption
+sensor.kitchen_fridge_power:
+  friendly_name: Fridge Power
 
-switch.fridge_socket_switch:
-  friendly_name: Fridge Socket
+switch.kitchen_fridge_switch:
+  friendly_name: Fridge
 
 sensor.hall_presence_light_energy:
   friendly_name: Presence Light Energy
