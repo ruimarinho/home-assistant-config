@@ -56,3 +56,11 @@
       command_off: !secret switch_switches_garden_sprinklers_station_7_switch_command_off
       command_state: !secret switch_switches_garden_sprinklers_station_7_switch_command_state
       value_template: '{% if value_json %}{{ value_json.sn[6] == 1 }}{% else %}{{ False }}{% endif %}'
+
+- platform: broadlink
+  host: !secret climate_living_room_ac_host
+  mac: !secret climate_living_room_ac_mac
+
+- platform: broadlink
+  host: !secret climate_suite_ac_host
+  mac: !secret climate_suite_ac_mac
