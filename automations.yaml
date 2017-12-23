@@ -1,22 +1,25 @@
-- id: notify_if_front_door_was_opened
-  alias: Notify if front door was opened
-  trigger:
-  - entity_id: binary_sensor.front_door_sensor
-    platform: state
-    to: 'on'
-  action:
-  - data:
-      message: The front door was opened.
-    service: notify.family
-- id: update_available
-  alias: Update available
+# Home Assistant
+- id: notify_if_an_update_is_available_for_home_assistant
+  alias: Notify if an update is available for Home Assistant
   trigger:
     platform: state
     entity_id: updater.updater
   action:
-  - data:
-      message: An update for Home Assistant is available.
     service: notify.family
+    data:
+      message: An update for Home Assistant is available.
+
+# Hall
+- id: notify_if_front_door_was_opened
+  alias: Notify if front door was opened
+  trigger:
+    platform: state
+    entity_id: binary_sensor.hall_front_door_sensor
+    to: 'on'
+  action:
+    service: notify.family
+    data:
+      message: The front door was opened.
 
 - id: turn_on_hall_light_when_door_is_opened_sun_is_set_and_nobody_is_home
   alias: Turn on hall light when door is opened, sun is set and nobody is home
