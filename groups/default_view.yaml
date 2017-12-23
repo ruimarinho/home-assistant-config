@@ -1,6 +1,7 @@
 default_view:
   view: yes
   entities:
+    - group.vacation
     - group.kitchen
     - group.hall
     - group.family

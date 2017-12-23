@@ -1,0 +1,4 @@
+vacation:
+  name: Vacation
+  entities:
+    - input_boolean.vacation_mode

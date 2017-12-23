@@ -38,6 +38,7 @@ camera: !include includes/camera.yaml
 device_tracker: !include includes/device_tracker.yaml
 group: !include_dir_merge_named groups/
 http: !include includes/http.yaml
+input_boolean: !include includes/input_boolean.yaml
 input_number: !include includes/input_number.yaml
 input_select: !include includes/input_select.yaml
 logger: !include includes/logger.yaml
