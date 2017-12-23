@@ -73,6 +73,16 @@ sensor.kitchen_fridge_power:
 switch.kitchen_fridge_switch:
   friendly_name: Fridge
 
+sensor.kitchen_storage_room_fridge_energy:
+  friendly_name: Storage Room Fridge Energy
+  icon: mdi:fridge
+
+sensor.kitchen_storage_room_fridge_power:
+  friendly_name: Storage Room Fridge Power
+
+switch.kitchen_storage_room_fridge_switch:
+  friendly_name: Storage Room Fridge
+
 sensor.hall_presence_light_energy:
   friendly_name: Presence Light Energy
 
