@@ -17,6 +17,11 @@
   state_topic: /home/laundry/washer/current
   unit_of_measurement: A
 
+- platform: template
+  sensors:
+    homeassistant_base_url:
+      value_template: !secret homeassistant_base_url
+
 - platform: rest
   name: Garden Sprinklers Last Run Sensor
   resource: !secret sensor_garden_sprinklers_last_run_sensor_resource

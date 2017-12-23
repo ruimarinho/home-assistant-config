@@ -50,32 +50,44 @@
   - data:
       entity_id: switch.hall_socket_switch
     service: switch.turn_off
-- id: turn_off_outdoor_lights_when_sun_rises
-  alias: Turn off outdoor lights when sun rises
+
+# Garden
+- id: turn_off_garden_lights_when_sun_rises
+  alias: Turn off garden lights when sun rises
   trigger:
-  - event: sunrise
+    platform: sun
+    event: sunrise
     offset: -00:30:00
-    platform: sun
   action:
-  - data:
+    - service: switch.turn_off
       entity_id: switch.basement_outdoor_lights_switch
-    service: switch.turn_off
-  - data:
-      message: The outdoor lights have been turned off.
-    service: notify.family
-- id: turn_on_outdoor_lights_when_sun_sets
-  alias: Turn on outdoor lights when sun sets
+    - delay: 00:00:10
+    - service: notify.family
+      data:
+        data:
+          photo:
+            caption: The garden lights have been turned off.
+            url: '{{ states.sensor.homeassistant_base_url.state ~ states.camera.rear.attributes.entity_picture }}'
+        message: Message is ignored
+
+- id: turn_on_garden_lights_when_sun_sets
+  alias: Turn on garden lights when sun sets
   trigger:
-  - event: sunset
-    offset: +00:15:00
     platform: sun
+    event: sunset
+    offset: +00:15:00
   action:
-  - data:
+    - service: switch.turn_on
       entity_id: switch.basement_outdoor_lights_switch
-    service: switch.turn_on
-  - data:
-      message: The outdoor lights have been turned on.
-    service: notify.family
+    - delay: 00:00:10
+    - service: notify.family
+      data:
+        data:
+          photo:
+            caption: The garden lights have been turned on.
+            url: '{{ states.sensor.homeassistant_base_url.state ~ states.camera.rear.attributes.entity_picture }}'
+        message: Message is ignored
+
 - id: turn_off_garden_sprinklers_station_1_after_timer
   alias: Turn off garden sprinklers station 1 after timer
   trigger:
