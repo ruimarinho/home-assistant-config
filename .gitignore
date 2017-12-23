@@ -1,7 +1,10 @@
 /*
 !.travis.yml
 !automations.yaml
+!broadlink_climate_codes
 !configuration.yaml
+!custom_components/
+!external/
 !groups/
 !includes/
 !LICENSE

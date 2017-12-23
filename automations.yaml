@@ -298,3 +298,48 @@
       data:
         entity_id: input_select.garage_door_status_dropdown
         option: 'Closed (Car Parked)'
+
+# Suite
+- id: turn_on_suite_heat_at_late_afternoon
+  alias: Turn on suite heat at late afternoon
+  trigger:
+    platform: time
+    at: '20:00:00'
+  condition:
+    condition: state
+    entity_id: input_boolean.vacation_mode
+    state: 'off'
+  action:
+    - service: climate.set_fan_mode
+      data:
+        entity_id: climate.suite_ac
+        fan_mode: auto
+    - service: climate.set_operation_mode
+      data:
+        entity_id: climate.suite_ac
+        operation_mode: heat
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.suite_ac
+        temperature: 22
+    - service: notify.family
+      data:
+        message: The AC has been turned on in the suite.
+
+- id: turn_off_suite_heat_at_late_night
+  alias: Turn off suite heat at late night
+  trigger:
+    platform: time
+    at: '00:30:00'
+  condition:
+    condition: state
+    entity_id: input_boolean.vacation_mode
+    state: 'off'
+  action:
+    - service: climate.set_operation_mode
+      data:
+        entity_id: climate.suite_ac
+        operation_mode: idle
+    - service: notify.family
+      data:
+        message: The AC has been turned off in the suite.

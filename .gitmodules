@@ -1,0 +1,3 @@
+[submodule "external/vpnmaster-climate"]
+	path = external/vpnmaster-climate
+	url = https://github.com/vpnmaster/homeassistant-custom-components.git

@@ -1,0 +1,4 @@
+suite:
+  name: Suite
+  entities:
+    - climate.suite_ac

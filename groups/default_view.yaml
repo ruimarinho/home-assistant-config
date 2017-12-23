@@ -4,6 +4,7 @@ default_view:
     - group.vacation
     - group.kitchen
     - group.hall
+    - group.suite
     - group.family
     - group.environment
     - group.outdoor

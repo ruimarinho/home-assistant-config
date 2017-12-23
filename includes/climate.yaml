@@ -1,0 +1,43 @@
+- platform: broadlink
+  name: Living Room AC
+  host: !secret climate_living_room_ac_host
+  mac: !secret climate_living_room_ac_mac
+  ircodes_ini: 'broadlink_climate_codes/daikin_arc433a21.ini'
+  min_temp: 18
+  max_temp: 30
+  target_temp: 22
+  default_operation: idle
+  default_fan_mode: auto
+  customize:
+    operations:
+      - idle
+      - auto
+      - cool
+      - heat
+    fan_modes:
+      - low
+      - mid
+      - high
+      - auto
+
+- platform: broadlink
+  name: Suite AC
+  host: !secret climate_suite_ac_host
+  mac: !secret climate_suite_ac_mac
+  ircodes_ini: 'broadlink_climate_codes/daikin_arc433a21.ini'
+  min_temp: 18
+  max_temp: 30
+  target_temp: 22
+  default_operation: idle
+  default_fan_mode: auto
+  customize:
+    operations:
+      - idle
+      - auto
+      - cool
+      - heat
+    fan_modes:
+      - low
+      - mid
+      - high
+      - auto
