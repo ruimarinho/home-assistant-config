@@ -10,6 +10,7 @@ default_view:
     - group.outdoor
     - group.laundry
     - group.garage
+    - group.basement
     - group.weather_today
     - group.weather_forecast
     - group.environment

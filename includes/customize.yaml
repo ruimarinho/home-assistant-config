@@ -59,6 +59,13 @@ input_number.garden_sprinklers_station_7_slider:
   friendly_name: Station 7 Timer
   icon: mdi:timer
 
+sensor.bar_energy:
+  friendly_name: Dehumidifier Energy
+  icon: mdi:water
+
+sensor.bar_power:
+  friendly_name: Dehumidifier Power
+
 sensor.garden_sprinklers_last_run_sensor:
   friendly_name: Last Run
   icon: mdi:water
@@ -94,6 +101,9 @@ sensor.us_air_pollution_level:
 
 sensor.us_main_pollutant:
   friendly_name: Main Pollutant
+
+switch.bar_switch:
+  friendly_name: Dehumidifier
 
 switch.garden_sprinklers_station_1_switch:
   friendly_name: Station 1
