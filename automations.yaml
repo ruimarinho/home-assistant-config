@@ -9,6 +9,22 @@
     data:
       message: An update for Home Assistant is available.
 
+# Basement
+- id: notify_if_dehumidifier_is_full
+  alias: Notify if dehumidifier is full
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.bar_power
+    below: 1
+  condition:
+    condition: state
+    entity_id: switch.bar_switch
+    state: 'on'
+  action:
+    service: notify.family
+    data:
+      message: The dehumidifier water deposit is full.
+
 # Laundry
 - id: notify_if_washer_has_finished
   alias: Notify if washer has finished
