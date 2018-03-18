@@ -8,6 +8,16 @@
   longitude: !secret homeassistant_longitude
 
 - platform: mqtt
+  name: Basement Temperature Sensor
+  state_topic: /home/basement/temperature-humidity-sensor/temperature
+  unit_of_measurement: °C
+
+- platform: mqtt
+  name: Basement Humidity Sensor
+  state_topic: /home/basement/temperature-humidity-sensor/humidity
+  unit_of_measurement: '%'
+
+- platform: mqtt
   name: Laundry Washer Power Consumption Sensor
   state_topic: /home/laundry/washer/power
   unit_of_measurement: W

@@ -74,6 +74,14 @@ sensor.bar_energy:
 sensor.bar_power:
   friendly_name: Dehumidifier Power
 
+sensor.basement_temperature_sensor:
+  friendly_name: Temperature
+  icon: mdi:temperature-celsius
+
+sensor.basement_humidity_sensor:
+  friendly_name: Humidity
+  icon: mdi:water-percent
+
 sensor.garden_sprinklers_last_run_sensor:
   friendly_name: Last Run
   icon: mdi:water
