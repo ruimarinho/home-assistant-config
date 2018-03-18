@@ -112,6 +112,14 @@ sensor.hall_presence_light_energy:
 sensor.hall_presence_light_power:
   friendly_name: Presence Light Power
 
+sensor.suite_temperature_sensor:
+  friendly_name: Temperature
+  icon: mdi:temperature-celsius
+
+sensor.suite_humidity_sensor:
+  friendly_name: Humidity
+  icon: mdi:water-percent
+
 sensor.us_air_pollution_level:
   friendly_name: Pollution Level
 

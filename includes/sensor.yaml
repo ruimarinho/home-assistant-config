@@ -44,6 +44,16 @@
   resource: !secret sensor_garden_sprinklers_last_run_sensor_resource
   value_template: '{{ value_json.lrun[3] | timestamp_local }}'
 
+- platform: mqtt
+  name: Suite Temperature Sensor
+  state_topic: /home/suite/temperature-humidity-sensor/temperature
+  unit_of_measurement: °C
+
+- platform: mqtt
+  name: Suite Humidity Sensor
+  state_topic: /home/suite/temperature-humidity-sensor/humidity
+  unit_of_measurement: '%'
+
 - platform: wunderground
   api_key: !secret sensor_wunderground_api_key
   pws_id: !secret sensor_wunderground_pws_id

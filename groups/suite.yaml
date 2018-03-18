@@ -2,3 +2,5 @@ suite:
   name: Suite
   entities:
     - climate.suite_ac
+    - sensor.suite_temperature_sensor
+    - sensor.suite_humidity_sensor
