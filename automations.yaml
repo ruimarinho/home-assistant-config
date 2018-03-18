@@ -334,7 +334,7 @@
   alias: Turn on suite heat at late afternoon
   trigger:
     platform: time
-    at: '20:00:00'
+    at: '19:30:00'
   condition:
     condition: state
     entity_id: input_boolean.vacation_mode
@@ -351,7 +351,7 @@
     - service: climate.set_temperature
       data:
         entity_id: climate.suite_ac
-        temperature: 22
+        temperature: 23
     - service: notify.family
       data:
         message: The AC has been turned on in the suite.

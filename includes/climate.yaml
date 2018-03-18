@@ -5,7 +5,7 @@
   ircodes_ini: 'broadlink_climate_codes/daikin_arc433a21.ini'
   min_temp: 18
   max_temp: 30
-  target_temp: 22
+  target_temp: 23
   temp_sensor: sensor.suite_temperature_sensor
   default_operation: idle
   default_fan_mode: auto
@@ -28,7 +28,8 @@
   ircodes_ini: 'broadlink_climate_codes/daikin_arc433a21.ini'
   min_temp: 18
   max_temp: 30
-  target_temp: 22
+  target_temp: 23
+  temp_sensor: sensor.suite_temperature_sensor
   default_operation: idle
   default_fan_mode: auto
   customize:
