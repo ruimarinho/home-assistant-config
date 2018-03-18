@@ -1,3 +1,9 @@
 [submodule "external/vpnmaster-climate"]
 	path = external/vpnmaster-climate
 	url = https://github.com/vpnmaster/homeassistant-custom-components.git
+[submodule "external/zigate"]
+	path = external/zigate
+	url = https://github.com/elric91/homeassistant_zigate.git
+[submodule "zigate"]
+	path = zigate
+	url = https://github.com/elric91/homeassistant_zigate.git

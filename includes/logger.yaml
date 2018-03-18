@@ -1,1 +1,8 @@
 default: warning
+logs:
+   custom_components.zigate: debug
+   custom_components.switch.zigate: debug
+   custom_components.sensor.zigate: debug
+   custom_components.light.zigate: debug
+   custom_components.zigate.zigate2hass: debug
+   zigate: debug

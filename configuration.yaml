@@ -50,4 +50,5 @@ sensor: !include includes/sensor.yaml
 switch: !include includes/switch.yaml
 telegram_bot: !include includes/telegram_bot.yaml
 updater: !include includes/updater.yaml
+zigate: !include includes/zigate.yaml
 zwave: !include includes/zwave.yaml
