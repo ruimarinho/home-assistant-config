@@ -1,1 +1,2 @@
 - platform: cast
+  host: !secret media_player_cast_host
