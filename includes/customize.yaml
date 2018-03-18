@@ -169,7 +169,7 @@ switch.living_room_sofa_corner_light_switch:
   icon: mdi:lightbulb-on-outline
 
 binary_sensor.laundry_washer_power_sensor:
-  friendly_name: Washer Power
+  friendly_name: Washing
   icon: mdi:washing-machine
 
 sensor.laundry_washer_current_consumption_sensor:
