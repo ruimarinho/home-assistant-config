@@ -31,6 +31,14 @@ binary_sensor.garden_sprinklers_station_7_sensor:
   friendly_name: Station 7
   icon: mdi:water
 
+group.all_automations:
+  friendly_name: Automations
+  hidden: false
+
+group.all_scripts:
+  friendly_name: Scripts
+  hidden: false
+
 input_number.garden_sprinklers_station_1_slider:
   friendly_name: Station 1 Timer
   icon: mdi:timer

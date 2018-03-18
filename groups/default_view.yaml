@@ -14,3 +14,5 @@ default_view:
     - group.weather_today
     - group.weather_forecast
     - group.environment
+    - group.all_automations
+    - group.all_scripts
