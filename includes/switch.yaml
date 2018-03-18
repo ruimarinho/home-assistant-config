@@ -1,16 +1,22 @@
 - platform: mqtt
   name: Living Room Sofa Corner Light Switch
-  state_topic: /home/living-room/sofa-corner-light/relay/0
+  availability_topic: /home/living-room/sofa-corner-light/status
   command_topic: /home/living-room/sofa-corner-light/relay/0/set
-  payload_on: '1'
+  state_topic: /home/living-room/sofa-corner-light/relay/0
+  payload_available: '1'
+  payload_not_available: '0'
   payload_off: '0'
+  payload_on: '1'
 
 - platform: mqtt
   name: Basement Outdoor Lights Switch
-  state_topic: /home/basement/outdoor-lights/relay/0
+  availability_topic: /home/basement/outdoor-lights/status
   command_topic: /home/basement/outdoor-lights/relay/0/set
-  payload_on: '1'
+  state_topic: /home/basement/outdoor-lights/relay/0
+  payload_available: '1'
+  payload_not_available: '0'
   payload_off: '0'
+  payload_on: '1'
 
 - platform: command_line
   scan_interval: 60
