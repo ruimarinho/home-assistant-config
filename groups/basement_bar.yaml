@@ -1,0 +1,6 @@
+basement_bar:
+  name: Bar
+  entities:
+    - sensor.bar_energy
+    - sensor.bar_power
+    - switch.bar_switch

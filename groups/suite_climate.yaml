@@ -1,0 +1,5 @@
+suite_climate:
+  name: Climate
+  entities:
+    - climate.suite_ac
+    - switch.suite_bathroom_radiator_switch

@@ -1,0 +1,6 @@
+suite_bathroom_air_quality:
+  name: Bathroom Air Quality
+  entities:
+    - sensor.suite_bathroom_temperature_sensor
+    - sensor.suite_bathroom_humidity_sensor
+    - sensor.suite_bathroom_pressure_sensor

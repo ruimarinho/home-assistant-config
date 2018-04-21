@@ -1,0 +1,5 @@
+cameras:
+  name: Cameras
+  entities:
+    - camera.living_room
+    - camera.rear

@@ -1,8 +1,8 @@
 basement:
   name: Basement
+  view: yes
   entities:
-    - sensor.bar_energy
-    - sensor.bar_power
-    - switch.bar_switch
-    - sensor.basement_temperature_sensor
-    - sensor.basement_humidity_sensor
+    - group.laundry
+    - group.garage
+    - group.basement_bar
+    - group.basement_air_quality

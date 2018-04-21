@@ -1,0 +1,6 @@
+basement_air_quality:
+  name: Air Quality
+  entities:
+    - sensor.basement_temperature_sensor
+    - sensor.basement_humidity_sensor
+

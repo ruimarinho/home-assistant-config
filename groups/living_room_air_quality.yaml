@@ -1,0 +1,6 @@
+living_room_air_quality:
+  name: Air Quality
+  entities:
+    - sensor.living_room_temperature_sensor
+    - sensor.living_room_humidity_sensor
+    - sensor.living_room_pressure_sensor

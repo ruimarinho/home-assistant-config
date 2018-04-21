@@ -1,0 +1,5 @@
+suite_air_quality:
+  name: Air Quality
+  entities:
+    - sensor.suite_temperature_sensor
+    - sensor.suite_humidity_sensor

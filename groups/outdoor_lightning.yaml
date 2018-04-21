@@ -1,0 +1,4 @@
+outdoor_lightning:
+  name: Lightning
+  entities:
+    - switch.basement_outdoor_lights_switch

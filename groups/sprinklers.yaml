@@ -1,0 +1,25 @@
+sprinklers:
+  name: Sprinklers
+  entities:
+    - input_number.garden_sprinklers_station_1_slider
+    - switch.garden_sprinklers_station_1_switch
+    - binary_sensor.garden_sprinklers_station_1_sensor
+    - input_number.garden_sprinklers_station_2_slider
+    - switch.garden_sprinklers_station_2_switch
+    - binary_sensor.garden_sprinklers_station_2_sensor
+    - input_number.garden_sprinklers_station_3_slider
+    - switch.garden_sprinklers_station_3_switch
+    - binary_sensor.garden_sprinklers_station_3_sensor
+    - input_number.garden_sprinklers_station_4_slider
+    - switch.garden_sprinklers_station_4_switch
+    - binary_sensor.garden_sprinklers_station_4_sensor
+    - input_number.garden_sprinklers_station_5_slider
+    - switch.garden_sprinklers_station_5_switch
+    - binary_sensor.garden_sprinklers_station_5_sensor
+    - input_number.garden_sprinklers_station_6_slider
+    - switch.garden_sprinklers_station_6_switch
+    - binary_sensor.garden_sprinklers_station_6_sensor
+    - input_number.garden_sprinklers_station_7_slider
+    - switch.garden_sprinklers_station_7_switch
+    - binary_sensor.garden_sprinklers_station_7_sensor
+    - sensor.garden_sprinklers_last_run_sensor

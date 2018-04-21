@@ -1,0 +1,6 @@
+hall_entrance:
+  name: Entrance
+  entities:
+    - binary_sensor.hall_front_door_sensor
+    - binary_sensor.tilting_window_sensor
+    - binary_sensor.main_door_sensor

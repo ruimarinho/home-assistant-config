@@ -1,6 +1,6 @@
 hall:
   name: Hall
+  view: yes
   entities:
-    - binary_sensor.main_door_sensor
-    - switch.hall_presence_light_switch
-    - sensor.hall_presence_light_power
+    - group.hall_entrance
+    - group.hall_lightning

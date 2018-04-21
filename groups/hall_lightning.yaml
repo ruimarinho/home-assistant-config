@@ -1,0 +1,5 @@
+hall_lightning:
+  name: Lightning
+  entities:
+    - switch.hall_presence_light_switch
+    - sensor.hall_presence_light_power

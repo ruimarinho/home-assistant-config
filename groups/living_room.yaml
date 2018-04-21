@@ -1,8 +1,7 @@
 living_room:
   name: Living Room
+  view: yes
   entities:
-    - climate.living_room_ac
-    - switch.living_room_sofa_corner_light_switch
+    - group.living_room_climate
+    - group.living_room_air_quality
     - media_player.living_room
-    - camera.living_room
-    - camera.rear

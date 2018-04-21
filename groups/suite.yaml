@@ -1,7 +1,7 @@
 suite:
   name: Suite
+  view: yes
   entities:
-    - climate.suite_ac
-    - sensor.suite_temperature_sensor
-    - sensor.suite_humidity_sensor
-    - switch.suite_bathroom_radiator_switch
+    - group.suite_climate
+    - group.suite_air_quality
+    - group.suite_bathroom_air_quality

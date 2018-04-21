@@ -1,3 +1,16 @@
+group.basement:
+  order: 5
+group.hall:
+  order: 1
+group.kitchen:
+  order: 4
+group.living_room:
+  order: 2
+group.outdoor:
+  order: 6
+group.suite:
+  order: 3
+
 binary_sensor.garden_sprinklers_station_1_sensor:
   friendly_name: Station 1
   icon: mdi:water

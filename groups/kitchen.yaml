@@ -1,9 +1,5 @@
 kitchen:
   name: Kitchen
+  view: yes
   entities:
-    - sensor.kitchen_fridge_energy
-    - sensor.kitchen_fridge_power
-    - switch.kitchen_fridge_switch
-    - sensor.kitchen_storage_room_fridge_energy
-    - sensor.kitchen_storage_room_fridge_power
-    - switch.kitchen_storage_room_fridge_switch
+    - group.kitchen_appliances

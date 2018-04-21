@@ -1,18 +1,9 @@
 default_view:
+  name: Dashboard
   view: yes
   entities:
-    - group.vacation
-    - group.kitchen
-    - group.hall
-    - group.living_room
-    - group.suite
     - group.family
-    - group.outdoor
-    - group.laundry
-    - group.garage
-    - group.basement
+    - group.cameras
+    - group.vacation
     - group.weather_today
     - group.weather_forecast
-    - group.environment
-    - group.all_automations
-    - group.all_scripts

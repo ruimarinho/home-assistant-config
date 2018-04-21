@@ -1,0 +1,4 @@
+living_room_climate:
+  name: Climate
+  entities:
+    - climate.living_room_ac
