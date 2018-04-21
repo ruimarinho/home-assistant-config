@@ -64,7 +64,7 @@
   sensors:
     garage_door_status_sensor:
       friendly_name: Door
-      value_template: '{{ states.input_select.garage_door_status_dropdown.state }}'
+      value_template: "{{ states('input_select.garage_door_status_dropdown') }}"
       entity_id: input_select.garage_door_status_dropdown
 
 - platform: template

@@ -243,89 +243,54 @@
       entity_id: switch.garden_sprinklers_station_7_switch
 
 # Garage
-- id: mark_garage_door_just_opened
-  alias: Mark garage door just opened
-  trigger:
-    platform: numeric_state
-    entity_id: sensor.garage_door_distance_sensor
-    below: 30
-  action:
-    - service: input_select.select_option
-      entity_id: input_select.select_option
-      data:
-        entity_id: input_select.garage_door_status_dropdown
-        option: 'Just Opened'
-
 - id: mark_garage_door_opened
   alias: Mark garage door opened
   trigger:
-    platform: state
-    entity_id: input_select.garage_door_status_dropdown
-    to: 'Just Opened'
+    platform: numeric_state
+    entity_id: sensor.garage_door_distance_sensor
+    below: 20
     for:
-      minutes: 2
+      seconds: 30
   action:
     - service: input_select.select_option
-      entity_id: input_select.select_option
       data:
         entity_id: input_select.garage_door_status_dropdown
         option: Open
-
-- id: mark_garage_door_just_closed
-  alias: Mark garage door just closed
-  trigger:
-    platform: numeric_state
-    entity_id: sensor.garage_door_distance_sensor
-    above: 100
-  action:
-    - service: input_select.select_option
-      entity_id: input_select.select_option
+    - service: notify.family
       data:
-        entity_id: input_select.garage_door_status_dropdown
-        option: 'Just Closed'
+        message: The garage door has been opened.
 
 - id: mark_garage_door_closed
   alias: Mark garage door closed
   trigger:
-    platform: state
-    entity_id: input_select.garage_door_status_dropdown
-    to: 'Just Closed'
+    platform: numeric_state
+    entity_id: sensor.garage_door_distance_sensor
+    above: 265
     for:
-      minutes: 2
+      seconds: 30
   action:
     - service: input_select.select_option
-      entity_id: input_select.select_option
       data:
         entity_id: input_select.garage_door_status_dropdown
         option: Closed
 
-- id: mark_garage_door_just_closed_with_parked_car
-  alias: Mark garage door just closed with parked car
-  trigger:
-    platform: numeric_state
-    entity_id: sensor.garage_door_distance_sensor
-    below: 80
-  action:
-    - service: input_select.select_option
-      entity_id: input_select.select_option
-      data:
-        entity_id: input_select.garage_door_status_dropdown
-        option: 'Just Closed (Car Parked)'
-
 - id: mark_garage_door_closed_with_parked_car
   alias: Mark garage door closed with parked car
   trigger:
-    platform: state
-    entity_id: input_select.garage_door_status_dropdown
-    to: 'Just Closed (Car Parked)'
+    platform: numeric_state
+    entity_id: sensor.garage_door_distance_sensor
+    below: 200
+    above: 80
     for:
-      minutes: 2
+      seconds: 30
   action:
     - service: input_select.select_option
-      entity_id: input_select.select_option
       data:
         entity_id: input_select.garage_door_status_dropdown
         option: 'Closed (Car Parked)'
+    - service: notify.family
+      data:
+        message: The garage door has been closed with a parked car.
 
 # Suite
 - id: turn_on_suite_heat_at_late_afternoon
