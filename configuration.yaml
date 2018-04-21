@@ -29,6 +29,9 @@ ios:
 # View all events in a logbook.
 logbook:
 
+# Maintain state by recording past events.
+recorder:
+
 # Track the sun.
 sun:
 
