@@ -122,6 +122,17 @@ sensor.hall_presence_light_energy:
 sensor.hall_presence_light_power:
   friendly_name: Presence Light Power
 
+sensor.suite_bathroom_temperature_sensor:
+  friendly_name: Temperature
+
+sensor.suite_bathroom_humidity_sensor:
+  friendly_name: Humidity
+  icon: mdi:water-percent
+
+sensor.suite_bathroom_pressure_sensor:
+  friendly_name: Atmospheric Pressure
+  icon: mdi:nature
+
 sensor.suite_temperature_sensor:
   friendly_name: Temperature
   icon: mdi:temperature-celsius

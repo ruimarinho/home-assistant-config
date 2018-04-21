@@ -71,6 +71,23 @@
   state_topic: /home/suite/temperature-humidity-sensor/humidity
   unit_of_measurement: '%'
 
+- platform: zigate
+  name: Suite Bathroom Temperature Sensor
+  address: !secret sensor_suite_bathroom_temperature_sensor_address
+  default_state: temperature
+  default_unit: '°C'
+
+- platform: template
+  sensors:
+    suite_bathroom_pressure_sensor:
+      friendly_name: Suite Bathroom Atmospheric Pressure
+      unit_of_measurement: 'mb'
+      value_template: '{{ states.sensor.suite_bathroom_temperature_sensor.attributes.pressure }}'
+    suite_bathroom_humidity_sensor:
+      friendly_name: Suite Bathroom Humidity
+      unit_of_measurement: '%'
+      value_template: '{{ states.sensor.suite_bathroom_temperature_sensor.attributes.humidity }}'
+
 - platform: wunderground
   api_key: !secret sensor_wunderground_api_key
   pws_id: !secret sensor_wunderground_pws_id
