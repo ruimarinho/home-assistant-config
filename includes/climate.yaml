@@ -6,7 +6,7 @@
   min_temp: 18
   max_temp: 30
   target_temp: 23
-  temp_sensor: sensor.suite_temperature_sensor
+  temp_sensor: sensor.living_room_temperature_sensor
   default_operation: idle
   default_fan_mode: auto
   customize:

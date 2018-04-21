@@ -85,6 +85,17 @@ sensor.garden_sprinklers_last_run_sensor:
   friendly_name: Last Run
   icon: mdi:water
 
+sensor.living_room_humidity_sensor:
+  friendly_name: Humidity
+  icon: mdi:water-percent
+
+sensor.living_room_pressure_sensor:
+  friendly_name: Atmospheric Pressure
+  icon: mdi:nature
+
+sensor.living_room_temperature_sensor:
+  friendly_name: Temperature
+
 sensor.kitchen_fridge_energy:
   friendly_name: Fridge Energy
   icon: mdi:fridge

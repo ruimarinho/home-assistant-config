@@ -22,6 +22,23 @@
   state_topic: /home/laundry/washer/power
   unit_of_measurement: W
 
+- platform: zigate
+  name: Living Room Temperature Sensor
+  address: !secret sensor_living_room_temperature_sensor_address
+  default_state: temperature
+  default_unit: '°C'
+
+- platform: template
+  sensors:
+    living_room_pressure_sensor:
+      friendly_name: Living Room Atmospheric Pressure
+      unit_of_measurement: 'mb'
+      value_template: '{{ states.sensor.living_room_temperature_sensor.attributes.pressure }}'
+    living_room_humidity_sensor:
+      friendly_name: Living Room Humidity
+      unit_of_measurement: '%'
+      value_template: '{{ states.sensor.living_room_temperature_sensor.attributes.humidity }}'
+
 - platform: mqtt
   name: Garage Door Distance Sensor
   state_topic: /home/garage/garage-door/distance
