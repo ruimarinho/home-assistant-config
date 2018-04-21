@@ -5,3 +5,11 @@
   payload_on: '1'
   payload_off: '0'
   value_template: '{{ (value|int > 10)|int }}'
+
+- platform: template
+  sensors:
+    main_door_sensor:
+      value_template: "{{ is_state('sensor.main_door', 'off-release') }}"
+      friendly_name: Front Door
+      device_class: door
+      entity_id: sensor.main_door

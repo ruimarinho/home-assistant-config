@@ -100,23 +100,20 @@
   alias: Notify if front door was opened
   trigger:
     platform: state
-    entity_id: binary_sensor.hall_front_door_sensor
+    entity_id: binary_sensor.main_door_sensor
     to: 'on'
   action:
     service: notify.family
     data:
       message: The front door was opened.
 
-- id: turn_on_hall_light_when_door_is_opened_sun_is_set_and_nobody_is_home
-  alias: Turn on hall light when door is opened, sun is set and nobody is home
+- id: turn_on_hall_light_when_door_is_opened_and_sun_is_set
+  alias: Turn on hall light when door is opened and sun is set
   trigger:
     platform: state
-    entity_id: binary_sensor.hall_front_door_sensor
+    entity_id: binary_sensor.main_door_sensor
     to: 'on'
   condition:
-    - condition: state
-      entity_id: group.family
-      state: 'not_home'
     - condition: state
       entity_id: sun.sun
       state: 'below_horizon'

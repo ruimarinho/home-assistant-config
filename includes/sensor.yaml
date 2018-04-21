@@ -109,3 +109,8 @@
     - weather_4n_metric
     - wind_1d_kph
     - wind_kph
+
+- platform: zigate
+  address: !secret sensor_main_door_address
+  name: Main Door
+  default_state: 'state'

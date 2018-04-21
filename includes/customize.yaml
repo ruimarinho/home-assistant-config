@@ -1,7 +1,3 @@
-binary_sensor.hall_front_door_sensor:
-  device_class: door
-  friendly_name: Front Door
-
 binary_sensor.garden_sprinklers_station_1_sensor:
   friendly_name: Station 1
   icon: mdi:water
