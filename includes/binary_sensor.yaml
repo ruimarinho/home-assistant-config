@@ -1,11 +1,3 @@
-- platform: mqtt
-  name: Laundry Washer Power Sensor
-  device_class: power
-  state_topic: /home/laundry/washer/power
-  payload_on: '1'
-  payload_off: '0'
-  value_template: '{{ (value|int > 10)|int }}'
-
 - platform: template
   sensors:
     main_door_sensor:
@@ -13,3 +5,13 @@
       friendly_name: Front Door
       device_class: door
       entity_id: sensor.main_door
+
+- platform: template
+  sensors:
+    laundry_washing_machine:
+      delay_on:
+        minutes: 5
+      delay_off:
+        minutes: 5
+      value_template: >-
+        {{ states('sensor.laundry_washer_power_consumption_sensor')|float > 20 }}

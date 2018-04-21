@@ -26,6 +26,10 @@ binary_sensor.garden_sprinklers_station_7_sensor:
   friendly_name: Station 7
   icon: mdi:water
 
+binary_sensor.laundry_washing_machine:
+  friendly_name: Washing
+  icon: mdi:washing-machine
+
 group.all_automations:
   friendly_name: Automations
   hidden: false

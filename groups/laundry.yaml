@@ -1,6 +1,4 @@
 laundry:
   name: Laundry
   entities:
-    - binary_sensor.laundry_washer_power_sensor
-    - sensor.laundry_washer_current_consumption_sensor
-    - sensor.laundry_washer_power_consumption_sensor
+    - binary_sensor.laundry_washing_machine

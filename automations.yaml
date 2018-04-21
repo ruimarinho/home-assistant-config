@@ -30,10 +30,8 @@
   alias: Notify if washer has finished
   trigger:
     platform: state
-    entity_id: binary_sensor.laundry_washer_power_sensor
+    entity_id: binary_sensor.laundry_washing_machine
     to: 'off'
-    for:
-      minutes: 5
   action:
     service: notify.family
     data:
