@@ -10,3 +10,4 @@
 !LICENSE
 !README.md
 !secrets.sample.yaml
+__pycache__
