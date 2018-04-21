@@ -189,6 +189,10 @@ switch.living_room_sofa_corner_light_switch:
   friendly_name: Sofa Corner Light
   icon: mdi:lightbulb-on-outline
 
+switch.suite_bathroom_radiator_switch:
+  friendly_name: Radiator
+  icon: mdi:format-align-justify
+
 binary_sensor.laundry_washer_power_sensor:
   friendly_name: Washing
   icon: mdi:washing-machine

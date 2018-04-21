@@ -4,3 +4,4 @@ suite:
     - climate.suite_ac
     - sensor.suite_temperature_sensor
     - sensor.suite_humidity_sensor
+    - switch.suite_bathroom_radiator_switch

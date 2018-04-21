@@ -1,8 +1,8 @@
 - platform: mqtt
-  name: Living Room Sofa Corner Light Switch
-  availability_topic: /home/living-room/sofa-corner-light/status
-  command_topic: /home/living-room/sofa-corner-light/relay/0/set
-  state_topic: /home/living-room/sofa-corner-light/relay/0
+  name: Suite Bathroom Radiator Switch
+  availability_topic: /home/suite/bathroom/radiator/status
+  command_topic: /home/suite/bathroom/radiator/relay/0/set
+  state_topic: /home/suite/bathroom/radiator/relay/0
   payload_available: '1'
   payload_not_available: '0'
   payload_off: '0'

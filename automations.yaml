@@ -337,6 +337,45 @@
       data:
         message: The AC has been turned off in the suite.
 
+- id: turn_on_suite_radiator_at_late_night
+  alias: Turn on suite radiator at late night
+  trigger:
+    platform: time
+    at: '23:15:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'off'
+      - condition: state
+        entity_id: switch.suite_bathroom_radiator_switch
+        state: 'off'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: switch.suite_bathroom_radiator_switch
+    - service: notify.family
+      data:
+        message: The radiator has been turned on in the suite's bathroom.
+
+- id: turn_off_suite_radiator_in_the_morning
+  alias: Turn off suite heat in the morning
+  trigger:
+    platform: time
+    at: '07:15:00'
+  condition:
+    condition: state
+    entity_id: switch.suite_bathroom_radiator_switch
+    state: 'on'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.suite_bathroom_radiator_switch
+    - service: notify.family
+      data:
+        message: The radiator has been turned off in the suite's bathroom.
+
 # Weather
 - id: notify_if_there_are_weather_alerts
   alias: Notify if there are weather alerts
