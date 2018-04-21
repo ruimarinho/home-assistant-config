@@ -2,3 +2,5 @@ laundry:
   name: Laundry
   entities:
     - binary_sensor.laundry_washing_machine
+    - sensor.laundry_washer_times_on_today
+    - sensor.laundry_washer_time_on_today

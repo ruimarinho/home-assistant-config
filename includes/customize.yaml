@@ -193,8 +193,11 @@ binary_sensor.laundry_washer_power_sensor:
   friendly_name: Washing
   icon: mdi:washing-machine
 
-sensor.laundry_washer_current_consumption_sensor:
-  friendly_name: Washer Current
+sensor.laundry_washer_times_on_today:
+  friendly_name: Turned On Today
+
+sensor.laundry_washer_time_on_today:
+  friendly_name: Time On Today
 
 sensor.laundry_washer_power_consumption_sensor:
   friendly_name: Washer Power
